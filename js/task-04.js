@@ -4,16 +4,16 @@ const valueEl = document.querySelector('#value')
 
 let counterValue = 0;
 
-const OnClickIncrement = () => { 
+const onClickIncrement = () => { 
     counterValue += 1
     valueEl.innerHTML = `${counterValue}`
 }
 
-const OnClickDecrement = () => { 
+const onClickDecrement = () => { 
     counterValue -= 1
     valueEl.innerHTML = `${counterValue}`
 }
-incrementBtn.addEventListener('click', OnClickIncrement)
-decrementBtn.addEventListener('click', OnClickDecrement)
+incrementBtn.addEventListener('click', onClickIncrement)
+decrementBtn.addEventListener('click', onClickDecrement)
 
 

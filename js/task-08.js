@@ -1,19 +1,17 @@
 const loginForm = document.querySelector('form')
 
-const OnSubmit = (event) => { 
+const onSubmit = (event) => { 
     event.preventDefault()
     const { email, password } = event.currentTarget.elements
     const data = {
-        email: email.value,
-        password: password.value
+        email: email.value.trim(),
+        password: password.value.trim()
     }
     if (!data.email || !data.password) {
-        alert('Не всі поля заповнені')
-    } else {
-        console.log('email :', data.email);
-        console.log('password :', data.password);
-    }    
-   loginForm.reset()
-
+       return alert('Не всі поля заповнені')
+    }  
+        
+    console.log(data)   
+    event.currentTarget.reset()
 }
-loginForm.addEventListener('submit', OnSubmit)
+loginForm.addEventListener('submit', onSubmit)

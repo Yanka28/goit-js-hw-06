@@ -1,7 +1,7 @@
 const inputEl = document.querySelector('#validation-input')
 const lengthInp = Number(inputEl.dataset.length); 
 
-function OnBlur() { 
+function onBlur() { 
     inputEl.classList.add('valid', 'invalid')
     
     let str = inputEl.value.trim()
@@ -13,5 +13,5 @@ function OnBlur() {
         }
 }
 
-inputEl.addEventListener('blur', OnBlur)
+inputEl.addEventListener('blur', onBlur)
 

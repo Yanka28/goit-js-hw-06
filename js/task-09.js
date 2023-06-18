@@ -8,11 +8,12 @@ const buttonEl = document.querySelector('button')
 const colorBG = document.querySelector('.color')
 
  
-const OnClickBtn = (callback) => { 
-  bodyEl.style.backgroundColor = getRandomHexColor()
-  colorBG.textContent = getRandomHexColor()
+const onClickBtn = (callback) => {
+  const color = getRandomHexColor()
+  bodyEl.style.backgroundColor = color
+  colorBG.textContent = color
 }
 
-buttonEl.addEventListener('click', OnClickBtn)
+buttonEl.addEventListener('click', onClickBtn)
 
 
